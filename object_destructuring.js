@@ -1,5 +1,7 @@
 // destructuring object does not follow an index like array, it can be destructured based on their properties
 
+// you can assign new variable name like this, propertyName: newVariableName. Ex. name: restoName;
+
 const restaurant = {
   name: 'Italian Pizza Hauz',
   menu: ['Pizza', 'Burgerz', 'Anything Italian'],
@@ -15,5 +17,11 @@ const restaurant = {
 
 }
 
-const {name, menu:[a, b,c], openingHours:{mon, sat, sun}} = restaurant;
-console.log(`Welcome to ${name}, we are open Mondays to Fridays at ${mon} and ${sat} on Saturdays but we are ${sun} on Sundays. Come and enjoy our menus like ${a}, ${b} and ${c} dishes.`);
+const {name: restoName, menu:[a, b,c], openingHours:{mon, sat, sun}} = restaurant;
+const restoInfo = `Welcome to ${restoName}, we are open Mondays to Fridays at ${mon} and ${sat} on Saturdays but we are ${sun} on Sundays. Come and enjoy our menus like ${a}, ${b} and ${c} dishes.`;
+
+const div = document.querySelector(".root");
+const h2 = document.createElement("h2");
+h2.innerHTML = restoInfo;
+h2.style.color = 'green';
+div.insertAdjacentElement('afterend', h2)
