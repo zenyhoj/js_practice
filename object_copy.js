@@ -9,7 +9,7 @@ const joe = {
 
 const eddie = Object.assign({}, joe); 
 eddie.name = 'Eddie';
-eddie.age = '43'
+eddie.age = '45'
 eddie.skills.push('Analysis');
 console.log(eddie);
 console.log(joe);
