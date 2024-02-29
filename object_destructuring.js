@@ -1,6 +1,12 @@
 // destructuring object does not follow an index like array, it can be destructured based on their properties
 
-// you can assign new variable name like this, propertyName: newVariableName. Ex. name: restoName;
+// can assign new variable name like this, propertyName: newVariableName. Ex. name: restoName;
+
+// destructuring can also occur on the object method as parameters, ex. orderDelivery: function({time, address, menu}) { // code here}
+// restaurant.orderDelivery = {time: '10:00 AM', address: 'some address', menu: [Pizza, etc]}
+
+// can also assign default value, ex. time = '8:00 PM', if time argument has no value, then the default will be used.
+
 
 const restaurant = {
   name: 'Italian Pizza Hauz',
@@ -25,3 +31,5 @@ const h2 = document.createElement("h2");
 h2.innerHTML = restoInfo;
 h2.style.color = 'green';
 div.insertAdjacentElement('afterend', h2)
+div.classList.add('root');
+

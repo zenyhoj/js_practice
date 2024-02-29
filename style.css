@@ -3,6 +3,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.root {
+width: 600px;
+height: 60vh;
+display: flex;
+justify-content: center;
+align-content: center;
+}
+
+
 .h2 {
 
 
