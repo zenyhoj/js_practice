@@ -23,6 +23,13 @@ const restaurant = {
 
 }
 
+function order({name, menu, openingHours: {mon}}) {
+  return `${name} ${menu}, ${mon}`
+
+}
+
+console.log(order(restaurant))
+
 const {name: restoName, menu:[a, b,c], openingHours:{mon, sat, sun}} = restaurant;
 const restoInfo = `Welcome to ${restoName}, we are open Mondays to Fridays at ${mon} and ${sat} on Saturdays but we are ${sun} on Sundays. Come and enjoy our menus like ${a}, ${b} and ${c} dishes.`;
 
